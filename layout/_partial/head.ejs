@@ -22,6 +22,15 @@
   <meta name="keywords" content="<%=(config.keywords||[]).join(',') %>" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/manifest.json">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="A Little Fish">
+  <meta name="application-name" content="A Little Fish">
+  <meta name="msapplication-config" content="images/browserconfig.xml">
+  <meta name="theme-color" content="#69f0ae">
   <%- favicon_tag(config.favicon) %>
   <%- feed_tag(config.feed.path, {title: config.title}) %>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
