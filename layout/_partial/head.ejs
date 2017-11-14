@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,36 +18,41 @@
     else if (is_tag())
       title = 'Tag: ' + page.tag;
   %>
-  <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
-  <meta name="description" content="<%= config.description %>" />
-  <meta name="keywords" content="<%=(config.keywords||[]).join(',') %>" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://blog.satoshicano.xyz/images/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://blog.satoshicano.xyz/images/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://blog.satoshicano.xyz/images/images/favicon-16x16.png">
-  <link rel="manifest" href="https://blog.satoshicano.xyz/images/images/manifest.json">
-  <link rel="shortcut icon" href="https://blog.satoshicano.xyz/images/images/favicon.ico">
-  <meta name="apple-mobile-web-app-title" content="A Little Fish">
-  <meta name="application-name" content="A Little Fish">
-  <meta name="msapplication-config" content="https://blog.satoshicano.xyz/images/images/browserconfig.xml">
-  <meta name="theme-color" content="#4caf50">
-  <%- favicon_tag(config.favicon) %>
-  <%- feed_tag(config.feed.path, {title: config.title}) %>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <%- open_graph({
+    <title>
+      <% if (title) { %>
+        <%= title %> |
+          <% } %>
+            <%= config.title %>
+    </title>
+    <meta name="description" content="<%= config.description %>" />
+    <meta name="keywords" content="<%=(config.keywords||[]).join(',') %>" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cano.work/images/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cano.work/images/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cano.work/images/images/favicon-16x16.png">
+    <link rel="manifest" href="https://cano.work/images/images/manifest.json">
+    <link rel="shortcut icon" href="https://cano.work/images/images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="A Little Fish">
+    <meta name="application-name" content="A Little Fish">
+    <meta name="msapplication-config" content="https://cano.work/images/images/browserconfig.xml">
+    <meta name="theme-color" content="#4caf50">
+    <%- favicon_tag(config.favicon) %>
+      <%- feed_tag(config.feed.path, {title: config.title}) %>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <%- open_graph({
     twitter_id: theme.twitter,
     google_plus: theme.google_plus, 
     fb_admins: theme.fb_admins, 
     fb_app_id: theme.fb_app_id}) %>
-    
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
-  <%- css('style.css') %>
-  <script>
-    function setLoadingBarProgress(num) {
-      document.getElementById('loading-bar').style.width=num+"%";
-    }
-  </script>
+
+          <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+          <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+          <%- css('style.css') %>
+            <script>
+              function setLoadingBarProgress(num) {
+                document.getElementById('loading-bar').style.width = num + "%";
+              }
+            </script>
 </head>
